@@ -40,3 +40,4 @@ function sendUsername(){
     var username = usernameElement.value;
     usernameElement.value = "";
     var toSend = JSON.stringify({"username": username});
+}

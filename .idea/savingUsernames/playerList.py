@@ -1,5 +1,5 @@
-redFilename = "redUsernames.txt"
-blueFilename = "blueUsernames.txt"
+redFilename = "redGuesses.txt"
+blueFilename = "blueGuesses.txt"
 
 
 def get_redUsernames():
