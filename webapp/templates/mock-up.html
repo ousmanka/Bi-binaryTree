@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/mock-up.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Baloo|Bungee|Concert+One|Montserrat|Nova+Flat|Patua+One|Press+Start+2P|Prosto+One|Righteous" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <title>Mock up</title>
+  
+</head>
+<body>
+  <img src = "img/logo.png" alt = logo id ="logo">
+    <!-- <h1 class="gameName">4 Pics 1 Word!</h1> -->
+  <table class= "table">
+    <tr>
+        <!-- <img src = "img/product-1.png" class="photos"> -->
+      <th class = "pictures"><img src = "https://source.unsplash.com/800x800/?tablet" class="photos" id = "photo1"></th>
+      <th class = "pictures"><img src = "https://source.unsplash.com/800x800/?laptop" class="photos" id = "photo2"></th>
+
+      <!-- <th class = "pictures"><img src="img/product-2.png" class="photos"></th> -->
+    </tr>
+    <tr>
+      <th class = "pictures"><img src = "https://source.unsplash.com/800x800/?smartphone" class="photos" id = "photo3"></th>
+      <th class = "pictures"><img src = "https://source.unsplash.com/800x800/?technology" class="photos" id = "photo4"></th>
+
+
+      <!-- <th class = "pictures"><img src="img/product-3.png" class="photos"></th>
+        <th class = "pictures"><img src ="img/product-4.png" class="photos"></th> -->
+      </tr> 
+    </table>
+    
+    <!-- <form class = "form"> -->
+      <div class = "form">
+
+        <input id = "guess" class = "guess">
+        <button id = "submit">
+          Submit
+        </button>
+        <button id="clear">
+          Clear
+        </button>
+      </div>
+        <!-- </form> -->
+
+  <div id="Modal1" class="modal" >
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img1">
+  </div>
+  
+  <div id="Modal2" class="modal" >
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img2">
+  </div>
+
+  <div id="Modal3" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img3">
+  </div>
+  <div id="Modal4" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img4">
+  </div>
+  <div id="redteam">Red Score: 0</div>
+  <div id="blueteam">Blue Score: 0</div>
+  <div id="countDown"></div>
+  <script>
+  
+  var modal1 = document.getElementById('Modal1');
+  var modal2 = document.getElementById('Modal2');
+  var modal3 = document.getElementById('Modal3');
+  var modal4 = document.getElementById('Modal4');
+
+  var image1 = document.getElementById('photo1');
+  var image2 = document.getElementById('photo2');
+  var image3 = document.getElementById('photo3');
+  var image4 = document.getElementById('photo4');
+
+  var modal1_img = document.getElementById('img1');
+  var modal2_img = document.getElementById('img2');
+  var modal3_img = document.getElementById('img3');
+  var modal4_img = document.getElementById('img4');
+
+  image1.onclick = function(){
+    modal1.style.display = "block";
+    modal1_img.src = this.src;
+  }
+  image2.onclick = function(){
+    modal2.style.display = "block";
+    modal2_img.src = this.src;
+  }
+  image3.onclick = function(){
+    modal3.style.display = "block";
+    modal3_img.src = this.src;
+  }
+  image4.onclick = function(){
+    modal4.style.display = "block";
+    modal4_img.src = this.src;
+  }
+
+  var clear_button = document.getElementById('clear')
+  clear_button.onclick = function(){
+    document.getElementById('guess').value = ""
+  }
+  var span1 = document.getElementsByClassName("close")[0]
+  span1.onclick = function(){
+    modal1.style.display = "none";
+  }
+  var span2 = document.getElementsByClassName("close")[1]
+  span2.onclick = function(){
+    modal2.style.display = "none";
+  }
+  var span3 = document.getElementsByClassName("close")[2]
+  span3.onclick = function(){
+    modal3.style.display = "none";
+  }
+  var span4 = document.getElementsByClassName("close")[3]
+  span4.onclick = function(){
+    modal4.style.display = "none";
+  }
+
+  var countDown = 15;
+ 
+  
+
+  var x = setInterval(function(){
+    if(countDown-1 > 0){
+    countDown = countDown-1;
+    document.getElementById('countDown').innerHTML = countDown;
+    }else{
+      countDown = "Time is Expired"
+      document.getElementById('countDown').innerHTML = countDown;
+    }
+
+  },1000);
+
+
+
+  </script>
+
+</body>
+</html>

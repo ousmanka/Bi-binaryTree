@@ -1,0 +1,137 @@
+body{
+  background:rgb(35, 109, 184);
+  font-size: 48px;
+  font-family: 'Montserrat', sans-serif;
+
+
+}
+.table{
+  margin: auto;
+  margin-top: 3%;
+  border-spacing: 100px 25px;
+}
+.pictures{
+  
+  border: solid 4px rgb(65, 64, 64);
+  background: white;
+  border-spacing: 5em;
+
+
+}
+.form{
+  margin:auto;
+ text-align: center;
+ margin-top: 50px;
+ 
+}
+.guess{
+  background-color: rgb(35, 109, 184);
+  font-size: 36px;
+  border:none;
+  color:white;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: solid 2px white;
+
+}
+#submit{
+font-size: 28px;
+font-family: 'Montserrat', sans-serif;
+background: greenyellow;
+border: solid 2px green;
+border-radius: 20px;
+}
+#clear{
+font-size: 28px;
+font-family: 'Montserrat', sans-serif;
+background: rgb(255, 22, 22);
+border: solid 2px rgb(167, 13, 13) ;
+border-radius: 20px;
+}
+#submit:hover{
+  background-color: green;
+  border: solid 2px black;
+}
+#clear:hover{
+  background: rgb(167, 13, 13);
+  border: solid 2px black;
+}
+.photos{
+  height: 220px;
+  width: 220px;
+}
+.gameName{
+  font-size:40px;
+  text-align: center;
+  color: rgb(89, 230, 183);
+}
+.photos:hover{
+  opacity: .7;
+}
+.close{
+  color:white;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.modal-content{
+  animation-name: zoomIn;
+  animation-duration: .5s;
+}
+.modal{
+  display: none;
+}
+@keyframes zoomIn{
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+#logo{
+position: absolute;
+top:0;
+left:15px;
+height:100px;
+}
+#logo:hover{
+  opacity: .7;
+}
+#redteam{
+  font-size: 32px;
+
+  position:absolute;
+  top:0;
+  right:0;
+color: red;
+}
+#blueteam{
+  font-size: 32px;
+position: absolute;
+color:blue;
+top:5%;
+right:0;
+}
