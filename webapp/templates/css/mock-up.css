@@ -1,14 +1,14 @@
 body{
   background:rgb(35, 109, 184);
   font-size: 48px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
 
 }
 .table{
   margin: auto;
-  margin-top: 3%;
-  border-spacing: 100px 25px;
+  margin-top: 2%;
+  border-spacing: 100px 20px;
 }
 .pictures{
   
@@ -63,7 +63,7 @@ border-radius: 20px;
 .gameName{
   font-size:40px;
   text-align: center;
-  color: rgb(89, 230, 183);
+  color: white;
 }
 .photos:hover{
   opacity: .7;
@@ -139,6 +139,7 @@ right:0;
   position: absolute;
   top:0;
   left:0;
+  right: 0;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -147,4 +148,11 @@ right:0;
 }
 #timer{
   margin-top: 25%;
+}
+#countDown{
+  position: absolute;
+  top:92%;
+}
+.guess::placeholder{
+  color: #9f9fa6;
 }
