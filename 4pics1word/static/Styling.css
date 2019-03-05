@@ -1,0 +1,64 @@
+#indexBody{
+    font-family: 'Prosto One', cursive;
+    /* font-family: 'Julius Sans One', sans-serif; */
+    background:#353f54;
+    color: white;
+    text-align: center;
+    animation-name: myanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+#bod{
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+    font-family: 'Prosto One', cursive;
+    font-size: 50px;
+    animation-name: transition;
+    animation-duration: 2s;
+
+
+}
+.text{
+    color:white;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    font-size: 50px;
+}
+.name{
+    background-color:#353f54;
+    /* background-color:white; */
+    font-size: 40px;
+    color: white;
+    border: none;
+    /* border-radius: 20px; */
+    width: 30%;
+    border-bottom: 2px solid white;
+    text-align: center;
+    animation-name: myanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.button{
+    margin: 20px 15px;
+    padding: 2px 10px;
+    font-size: 24px;
+    background: white;
+    color:#00CED1;
+    border: 2px solid #00CED1;
+    border-radius: 15px;
+
+}
+
+.button:hover{
+    background: #00CED1;
+    color:white;
+    border: solid 2px white;
+}
+@keyframes myanimation {
+    0%{background-color: #353f54;}
+
+    45%{background-color: #2a7d82;}
+
+    100%{background-color: #353f54;}
+}
