@@ -1,5 +1,6 @@
 #indexBody{
     font-family: 'Prosto One', cursive;
+    /*font-family: 'Roboto', sans-serif;*/
     /* font-family: 'Julius Sans One', sans-serif; */
     background:#353f54;
     color: white;
@@ -12,7 +13,7 @@
     color: white;
     text-align: center;
     margin-top: 20%;
-    font-family: 'Prosto One', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 50px;
     animation-name: transition;
     animation-duration: 2s;
