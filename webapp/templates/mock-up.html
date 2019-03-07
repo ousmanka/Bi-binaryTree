@@ -15,7 +15,7 @@
 </head>
 <body>
 <img src="img/logo.png" alt=logo id="logo">
- <h1 class="gameName">Whats the Word?</h1>
+<h1 class="gameName">Whats the Word?</h1>
 <table class="table">
     <tr>
         <!-- <img src = "img/product-1.png" class="photos"> -->
@@ -51,23 +51,23 @@
 </div>
 <!-- </form> -->
 
-<div id="Modal1" class="modal">
+<div id="Image1" class="Image">
     <span class="close">&times;</span>
-    <img class="modal-content" id="img1">
+    <img class="Image-content" id="img1">
 </div>
 
-<div id="Modal2" class="modal">
+<div id="Image2" class="Image">
     <span class="close">&times;</span>
-    <img class="modal-content" id="img2">
+    <img class="Image-content" id="img2">
 </div>
 
-<div id="Modal3" class="modal">
+<div id="Image3" class="Image">
     <span class="close">&times;</span>
-    <img class="modal-content" id="img3">
+    <img class="Image-content" id="img3">
 </div>
-<div id="Modal4" class="modal">
+<div id="Image4" class="Image">
     <span class="close">&times;</span>
-    <img class="modal-content" id="img4">
+    <img class="Image-content" id="img4">
 </div>
 <div id="redteam">Red Score: 0</div>
 <div id="blueteam">Blue Score: 0</div>
@@ -75,39 +75,78 @@
 <div id="time">
     <div id="timer"></div>
 </div>
+<div class="body" id="hideRed">
+    <div class="statTitle">Red Team Guesses</div>
+    <div class="stats" id="redTeamStats">
+        <p>'Technology'</p>
+        <div class="redbar" id="rbar1">40%</div>
+        <p>'Phone'</p>
+        <div class="redbar" id="rbar2">22%</div>
+        <p>'Tablet'</p>
+        <div class="redbar" id="rbar3">20%</div>
+        <p>'Smartphone'</p>
+        <div class="redbar" id="rbar4">18%</div>
+    </div>
+</div>
+<div class="body" id="hideBlue">
+    <div class="statTitle">Blue Team Guesses</div>
+    <div class="stats" id="blueTeamStats">
+        <p>'Technology'</p>
+        <div class="bluebar" id="bbar1">60%</div>
+        <p>'Phones'</p>
+        <div class="bluebar" id="bbar2">30%</div>
+        <p>'Tech'</p>
+        <div class="bluebar" id="bbar3">5%</div>
+        <p>'Future'</p>
+        <div class="bluebar" id="bbar4">5%</div>
+    </div>
+
+</div>
+<div class="body2" id="hideScore">
+    <div class="container">
+        <div id="correctWord">Correct word was : Technology</div>
+        <div id="bt">
+            Blue Team : 1
+        </div>
+        <div id="rt">
+            Red Team : 0
+        </div>
+    </div>
+</div>
+
 <script>
 
 
-    var modal1 = document.getElementById('Modal1');
-    var modal2 = document.getElementById('Modal2');
-    var modal3 = document.getElementById('Modal3');
-    var modal4 = document.getElementById('Modal4');
+    var Image1 = document.getElementById('Image1');
+    var Image2 = document.getElementById('Image2');
+    var Image3 = document.getElementById('Image3');
+    var Image4 = document.getElementById('Image4');
 
     var image1 = document.getElementById('photo1');
     var image2 = document.getElementById('photo2');
     var image3 = document.getElementById('photo3');
     var image4 = document.getElementById('photo4');
 
-    var modal1_img = document.getElementById('img1');
-    var modal2_img = document.getElementById('img2');
-    var modal3_img = document.getElementById('img3');
-    var modal4_img = document.getElementById('img4');
+    var Image1_img = document.getElementById('img1');
+    var Image2_img = document.getElementById('img2');
+    var Image3_img = document.getElementById('img3');
+    var Image4_img = document.getElementById('img4');
 
     image1.onclick = function () {
-        modal1.style.display = "block";
-        modal1_img.src = this.src;
+        Image1.style.display = "block";
+        Image1_img.src = this.src;
     }
     image2.onclick = function () {
-        modal2.style.display = "block";
-        modal2_img.src = this.src;
+        Image2.style.display = "block";
+        Image2_img.src = this.src;
     }
     image3.onclick = function () {
-        modal3.style.display = "block";
-        modal3_img.src = this.src;
+        Image3.style.display = "block";
+        Image3_img.src = this.src;
     }
     image4.onclick = function () {
-        modal4.style.display = "block";
-        modal4_img.src = this.src;
+        Image4.style.display = "block";
+        Image4_img.src = this.src;
     }
 
     var clear_button = document.getElementById('clear')
@@ -116,19 +155,19 @@
     }
     var span1 = document.getElementsByClassName("close")[0]
     span1.onclick = function () {
-        modal1.style.display = "none";
+        Image1.style.display = "none";
     }
     var span2 = document.getElementsByClassName("close")[1]
     span2.onclick = function () {
-        modal2.style.display = "none";
+        Image2.style.display = "none";
     }
     var span3 = document.getElementsByClassName("close")[2]
     span3.onclick = function () {
-        modal3.style.display = "none";
+        Image3.style.display = "none";
     }
     var span4 = document.getElementsByClassName("close")[3]
     span4.onclick = function () {
-        modal4.style.display = "none";
+        Image4.style.display = "none";
     }
 
     var countDown = 16;
@@ -152,9 +191,46 @@
                 countDown = countDown - 1;
                 document.getElementById('countDown').innerHTML = countDown;
             } else {
-                countDown = "Time is Expired"
-                document.getElementById('countDown').innerHTML = countDown;
+                countDown = countDown - 1;
+                document.getElementById('countDown').innerHTML = "Time is Expired";
             }
+        }
+    }, 1000);
+    var redBar1 = document.getElementById('rbar1');
+    var redBar2 = document.getElementById('rbar2');
+    var redBar3 = document.getElementById('rbar3');
+    var redBar4 = document.getElementById('rbar4');
+    var rWidth1 = 40 * 20;
+    var rWidth2 = 22 * 20;
+    var rWidth3 = 20 * 20;
+    var rWidth4 = 18 * 20;
+    redBar1.style.width = rWidth1 + "px";
+    redBar2.style.width = rWidth2 + "px";
+    redBar3.style.width = rWidth3 + "px";
+    redBar4.style.width = rWidth4 + "px";
+    var blueBar1 = document.getElementById('bbar1');
+    var blueBar2 = document.getElementById('bbar2');
+    var blueBar3 = document.getElementById('bbar3');
+    var blueBar4 = document.getElementById('bbar4');
+    var bWidth1 = 60 * 20;
+    var bWidth2 = 30 * 20;
+    var bWidth3 = 5 * 20;
+    var bWidth4 = 5 * 20;
+    blueBar1.style.width = bWidth1 + "px";
+    blueBar2.style.width = bWidth2 + "px";
+    blueBar3.style.width = bWidth3 + "px";
+    blueBar4.style.width = bWidth4 + "px";
+    document.getElementById('hideRed').style.display = "none";
+    document.getElementById('hideBlue').style.display = "none";
+    var z = setInterval(function () {
+        if (countDown == -2) {
+            document.getElementById('hideRed').style.display = "block";
+        }
+        if (countDown == -10) {
+            document.getElementById('hideBlue').style.display = "block";
+        }
+        if(countDown == -18){
+            document.getElementById('hideScore').style.display = "block";
         }
     }, 1000);
 
